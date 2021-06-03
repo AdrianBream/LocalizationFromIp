@@ -1,5 +1,5 @@
 const ACCESS_KEY = 'f82b09f38a0854e5d26d825c403bdb52';
-const IPSTACK_BASE_URL = 'https://api.ipstack.com/';
+const IPSTACK_BASE_URL = 'http://api.ipstack.com/';
 
 export interface LocalizationResponse {
     ip: string;
