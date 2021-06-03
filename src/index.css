@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app {
+  padding: 15px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-rows: 5fr 1fr 5fr;
+  gap: 25px 25px;
+  grid-template-areas:
+    "search-history current-location current-location current-location-info"
+    "search-history search-bar search-bar search-bar"
+    "search-history prev-location prev-location prev-location-info";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.search-history { grid-area: search-history; }
+
+.current-location { grid-area: current-location; }
+
+.search-bar {
+  display: flex;
+  grid-area: search-bar;
+}
+
+.search-bar button {
+  padding: 0 40px;
+  margin-left: 30px;
+  font-weight: bold;
+  color: white;
+  background: green;
+}
+
+.search-bar input {
+  width: 100%;
+  font-size: 2em;
+}
+
+.prev-location { grid-area: prev-location; }
+
+.current-location-info { grid-area: current-location-info; }
+
+.prev-location-info { grid-area: prev-location-info; }
+
+.container {
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid  black;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.8);
+}
+
+.history-item:hover {
+  cursor: pointer;
+  background: lightslategray;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
 }
